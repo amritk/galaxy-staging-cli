@@ -28,7 +28,17 @@ The full API of this library can be found in [api.md](./api.md).
 
 ```sh
 # npm (requires Node.js)
-npm install -g demo-api-scalar-galaxy-cli
+npm install -g @amritk/galaxy-staging-cli
+
+# Homebrew — standalone binary, no Node.js required
+brew install amritk/galaxy-staging-tap/demoapiscalargalaxy
+
+# Direct download — standalone binary, no Node.js required
+curl -fsSL https://github.com/amritk/galaxy-staging-cli/releases/latest/download/demoapiscalargalaxy-$(uname -s | tr '[:upper:]' '[:lower:]')-$(uname -m | sed 's/x86_64/x64/;s/aarch64/arm64/').tar.gz | tar xz
+sudo mv demoapiscalargalaxy /usr/local/bin/
+
+# Windows — download and extract demoapiscalargalaxy-windows-x64.zip, then add it to PATH
+# https://github.com/amritk/galaxy-staging-cli/releases/latest/download/demoapiscalargalaxy-windows-x64.zip
 ```
 
 <br />
@@ -162,6 +172,6 @@ Generated clients support request timeouts and retry temporary failures such as 
 
 ## Requirements
 
-- Node.js 20 or newer
+- Node.js 20 or newer — for the npm install only; the standalone binaries bundle their own runtime.
 
 Powered by Scalar.

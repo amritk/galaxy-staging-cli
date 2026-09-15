@@ -1,17 +1,27 @@
 ---
 name: demo-api-scalar-galaxy-cli-sdk
-description: "CLI SDK for Demo API (Scalar Galaxy). Use when writing CLI code that calls Demo API (Scalar Galaxy) with the demo-api-scalar-galaxy-cli package: installing it, constructing and authenticating the client, and calling API operations."
+description: "CLI SDK for Demo API (Scalar Galaxy). Use when writing CLI code that calls Demo API (Scalar Galaxy) with the @amritk/galaxy-staging-cli package: installing it, constructing and authenticating the client, and calling API operations."
 ---
 
 # Demo API (Scalar Galaxy) CLI SDK
 
-Generated CLI client for Demo API (Scalar Galaxy), published as `demo-api-scalar-galaxy-cli`. Use the generated client instead of hand-writing HTTP requests.
+Generated CLI client for Demo API (Scalar Galaxy), published as `@amritk/galaxy-staging-cli`. Use the generated client instead of hand-writing HTTP requests.
 
 ## Install
 
 ```sh
 # npm (requires Node.js)
-npm install -g demo-api-scalar-galaxy-cli
+npm install -g @amritk/galaxy-staging-cli
+
+# Homebrew — standalone binary, no Node.js required
+brew install amritk/galaxy-staging-tap/demoapiscalargalaxy
+
+# Direct download — standalone binary, no Node.js required
+curl -fsSL https://github.com/amritk/galaxy-staging-cli/releases/latest/download/demoapiscalargalaxy-$(uname -s | tr '[:upper:]' '[:lower:]')-$(uname -m | sed 's/x86_64/x64/;s/aarch64/arm64/').tar.gz | tar xz
+sudo mv demoapiscalargalaxy /usr/local/bin/
+
+# Windows — download and extract demoapiscalargalaxy-windows-x64.zip, then add it to PATH
+# https://github.com/amritk/galaxy-staging-cli/releases/latest/download/demoapiscalargalaxy-windows-x64.zip
 ```
 
 ## Client setup and authentication
@@ -51,7 +61,7 @@ Failed requests print a structured error to standard error and exit with a statu
 
 ## Requirements
 
-- Node.js 20 or newer
+- Node.js 20 or newer — for the npm install only; the standalone binaries bundle their own runtime.
 
 ## Reference files
 
